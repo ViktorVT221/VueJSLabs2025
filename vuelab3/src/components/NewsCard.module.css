@@ -1,0 +1,16 @@
+.card {
+  display: flex;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 10px;
+  background: var(--surface);
+  align-items: flex-start;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+.thumb { width: 160px; height: 100px; object-fit: cover; border-radius: 8px; }
+.content { flex: 1; }
+.title { font-weight:700; margin-bottom:6px; color: var(--text); }
+.meta { font-size: 13px; color: var(--muted); margin-bottom:8px; }
+.excerpt { color: var(--muted); }
+.btnGroup { margin-top:10px; display:flex; gap:8px; }
+.readBtn { padding:8px 12px; border-radius:8px; background:var(--accent); color:white; border:none; cursor:pointer; }
