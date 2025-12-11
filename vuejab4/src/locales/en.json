@@ -1,0 +1,21 @@
+{
+  "title": "Products",
+  "addToCart": "Add",
+  "cart": "Cart",
+  "total": "Total",
+
+  "profile": "Profile",
+  "name": "Name",
+  "email": "Email",
+  "dob": "Date of birth",
+  "address": "Address",
+  "phones": "Phones",
+
+  "save": "Save",
+  "reset": "Reset",
+
+  "errors": {
+    "required": "{field} is required",
+    "email": "Invalid email"
+  }
+}
