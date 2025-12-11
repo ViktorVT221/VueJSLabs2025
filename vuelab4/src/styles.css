@@ -1,0 +1,415 @@
+/* === ГЛОБАЛЬНІ СТИЛІ === */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f2f2f7;
+  color: #222;
+}
+
+/* === HEADER === */
+
+header {
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 15px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #444;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: #007aff;
+}
+
+/* === КОНТЕНТ === */
+
+main {
+  padding: 30px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* === GRID для продуктів === */
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* === КАРТКА ТОВАРУ === */
+
+.product-card {
+  background: white;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.product-card h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.product-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.product-card .price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.product-card button {
+  background: #007aff;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.product-card button:hover {
+  background: #0060d1;
+}
+
+/* === КОРЗИНА === */
+
+.cart-item {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart-item img {
+  width: 80px;
+  border-radius: 8px;
+}
+
+.cart-item .remove {
+  background: #ff3b30;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cart-item .remove:hover {
+  background: #d62824;
+}
+
+/* === ФОРМА ПРОФІЛЮ === */
+
+.profile-wrapper {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.profile-wrapper h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 15px;
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 10px 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 15px;
+  background: #f9f9f9;
+  transition: 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #007aff;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.15);
+}
+
+.error-text {
+  margin-top: 4px;
+  color: #d62828;
+  font-size: 13px;
+}
+
+/* === Телефони === */
+
+.phone-row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.phone-row input {
+  flex: 1;
+}
+
+.remove-btn {
+  padding: 6px 10px;
+  background: #ff3b30;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.remove-btn:hover {
+  background: #d62828;
+}
+
+.add-phone-btn {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+}
+
+/* === КНОПКИ ФОРМИ === */
+
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-save {
+  background: #007aff;
+  color: white;
+}
+
+.btn-save:hover {
+  background: #0060d1;
+}
+
+.btn-reset {
+  background: #e4e4e4;
+}
+
+.btn-reset:hover {
+  background: #d4d4d4;
+}
+
+/* === CART PAGE === */
+
+.cart-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+
+.cart-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.cart-total {
+  font-size: 20px;
+  margin-bottom: 25px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border: 1px solid #e0e0e0;
+  padding: 14px 18px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  transition: 0.2s;
+}
+
+.cart-item:hover {
+  background: #f0f8ff;
+  border-color: #c6ddff;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cart-item-title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cart-item-price {
+  font-size: 15px;
+  color: #333;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-btn {
+  background: #007aff;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.quantity-btn:hover {
+  background: #005fcc;
+}
+
+.remove-btn {
+  background: #ff3b30;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.remove-btn:hover {
+  background: #d62828;
+}
+
+.empty-cart {
+  text-align: center;
+  padding: 40px;
+  font-size: 22px;
+  opacity: 0.6;
+}
+
+/* === PRODUCTS PAGE === */
+
+.products-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.products-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.product-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  font-size: 18px;
+  margin-bottom: 18px;
+}
+
+.add-btn {
+  background: #007aff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.add-btn:hover {
+  background: #005fcc;
+}
